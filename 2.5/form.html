@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Simple HTML Form</title>
+	<style>
+		fieldset{
+			border:2px solid black;
+		}
+		label{
+			font-weight:bold;
+			color:#300acc;
+		}
+		.sub_align{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<form action="handle_form.php" method="post"> <!--action的属性值，表单数据要发送到的目标文件；method的属性值，以何种方式把数据发送到处理页面-->
+		<fieldset><legend>Enter your information in the form below:</legend>
+			<p><label for="">Name:<input type="text" name="name" size="20" maxlength="40" /></label></p>
+			<p><label for="">Email Address:<input type="text" name="email" size="40" maxlength="60" /></label></p>
+			<p><label for="gender">Gender:</label>
+			   <input type="radio" name="gender"	value="M" />Male
+			   <input type="radio" name="gender" value="F"  />Female
+			</p>
+			<p><label for="">Age:
+				<select name="age" id="">
+					<option value="0-29">Under 30</option>
+					<option value="30-60">Between 30 and 60</option>
+					<option value="60+">Over 60</option>
+				</select></label></p>
+			<p><label for="">Comments: <textarea name="comment" id="" cols="40" rows="3"></textarea></label></p>
+		</fieldset>
+		<p class="sub_align"><input type="submit" name="submit" value="Submit My Information"></p>
+	</form>
+</body>
+</html>
