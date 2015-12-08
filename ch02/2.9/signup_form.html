@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>注册表单</title>
+	<style>
+		body{ margin:0px; padding:0px; font-size:16px;}
+		div#form{
+			width:400px;
+			height:500px;
+			margin:0 auto;
+			margin-top: 50px;
+			padding:20px 50px;
+			border: 1px solid orange;
+		}
+		label{font-weight:bold; line-height:18px;}
+		form>label{ display:block; padding:4px; margin:5px;}
+		form>label input{margin-left:10px;}
+		span{font-weight:bold;}
+		div.like_select label{font-weight:normal;}
+		div.like_select{margin-top:20px;}
+		#submit_bn{text-align:center;}
+	</style>
+</head>
+<body>
+<div id="form">
+<form action="signup_form_handle.php" method="post">
+	<label for="">username:<input type="text" name="username" /></label>
+	<label for="">email:<input type="text" name="email" /></label>
+	<label for="">password:<input type="password" name="password" /></label>
+
+	
+	<div class="like_select">
+	<span>兴趣爱好：</span>
+	<label for=""><input type="checkbox" name="xq[]" value="xinwen" />新闻</label>
+	<label for=""><input type="checkbox" name="xq[]" value='tiyu'>体育</label>
+	<label for=""><input type="checkbox" name="xq[]" value="yule">娱乐</label>
+	<label for=""><input type="checkbox" name="xq[]" value="caijing">财经</label>
+	<label for=""><input type="checkbox" name="xq[]" value="shishang">时尚</label>
+	<label for=""><input type="checkbox" name="xq[]" value="shenghuo">生活</label>
+	<label for=""> <input type="checkbox" name="xq[]" value="qiche">汽车</label>
+	</div>
+	<label for=""><input id="submit_bn" type="submit" value="Submit" /></label>
+</form>
+</div>
+</body>
+</html>
